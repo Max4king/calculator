@@ -1,13 +1,13 @@
 body {
     text-align: center;
-    background-color: lightgray;
+    background-color: #885D28;
 }
 
 .container {
     display: grid;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: minmax(100px, auto) repeat(4, 80px);
-    border: solid darkgray 5px;
+    border: solid burlywood 5px;
     border-radius: 5px;
 }
 
@@ -28,11 +28,12 @@ body {
     text-align: right;
     text-decoration: none;
     border: none;
-    background-color: black;
+    background-color: #D09F62;
     font-size: 70px;
 }
 
 .button {
-    background-color: green;
+    background-color: #C5873A;
     color: white;
+    border-radius: 5px;
 }
