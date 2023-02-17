@@ -1,12 +1,14 @@
 body {
     text-align: center;
-    background-color: black;
+    background-color: lightgray;
 }
 
 .container {
     display: grid;
     grid-template-columns: repeat(4, 100px);
-    grid-template-rows: minmax(100px, auto) repeat(5, 80px);
+    grid-template-rows: minmax(100px, auto) repeat(4, 80px);
+    border: solid darkgray 5px;
+    border-radius: 5px;
 }
 
 .calculator {
@@ -26,8 +28,8 @@ body {
     text-align: right;
     text-decoration: none;
     border: none;
-    background-color: gray;
-    font-size: 50px;
+    background-color: black;
+    font-size: 70px;
 }
 
 .button {
