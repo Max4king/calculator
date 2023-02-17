@@ -1,6 +1,7 @@
 /* Calculator.js
     Basic Calculator with GUI
     func + - * /
+    // Deprecated Due to too many bug and problems
 */
 
 function add(a,b) {return a + b;}
