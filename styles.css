@@ -1,12 +1,13 @@
 body {
     text-align: center;
     background-color: #885D28;
+    margin: 0;
 }
 
 .container {
     display: grid;
     grid-template-columns: repeat(4, 100px);
-    grid-template-rows: minmax(100px, auto) repeat(4, 80px);
+    grid-template-rows: minmax(110px, auto) repeat(4, 90px);
     border: solid burlywood 5px;
     border-radius: 5px;
 }
@@ -23,8 +24,6 @@ body {
 
 .display {
     grid-column: 1 / -1;
-    flex: 1;
-    justify-content: center;
     text-align: right;
     text-decoration: none;
     border: none;
@@ -36,4 +35,20 @@ body {
     background-color: #C5873A;
     color: white;
     border-radius: 5px;
+    font-size: 25px;
+}
+
+.footer {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    background-color: #D09F62;
+    font-size: 20px;
+}
+
+.footer > button {
+    background-color: red;
+    margin: 10px;
+    padding: 5px 10px;
+    font-size: 20px;
 }
