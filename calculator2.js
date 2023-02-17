@@ -24,6 +24,8 @@ let second_input = false;
 
 num_buttons.forEach( button => {
     button.addEventListener ( "click", () => {
+        // Number does not clear automatically when inputing new number after the
+        // expression is done 
         if (!operator_used && !first_input){
             last_num = parseInt(last_num + button.value);
             display.textContent = last_num;
@@ -32,14 +34,14 @@ num_buttons.forEach( button => {
             display.textContent = next_num;
             second_input = true;
         }
-        console.log("num1: ",last_num);
-        console.log("num2: ", next_num);
+        // console.log("num1: ",last_num);
+        // console.log("num2: ", next_num);
     });
 });
 
 operators.forEach( button => {
     button.addEventListener( "click", () => {
-        console.log(button.value, "is pressed");
+        // console.log(button.value, "is pressed");
         if (second_input && operator_used){
             if (next_num === 0 && operator_func === divide) {
                 console.log("This is an error!!!!!!!!!!!!");
@@ -59,17 +61,17 @@ operators.forEach( button => {
             operator_used = false;
             operator_func = undefined;
             next_num = 0;
+            first_input = false;
             second_input = false;
         }
         if (button.value !== "operate") {
             operator_func = operator_check(button.value);
             operator_used = true;
             first_input = true;
-            console.log("operator_used", operator_used)
 
         } 
-        console.log("num1: ",last_num);
-        console.log("num2: ", next_num);
+        // console.log("num1: ",last_num);
+        // console.log("num2: ", next_num);
     });
 });
 
