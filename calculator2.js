@@ -24,10 +24,7 @@ let second_input = false;
 
 num_buttons.forEach( button => {
     button.addEventListener ( "click", () => {
-        console.log("num1: ",last_num);
-        console.log("num2: ", next_num);
         if (!operator_used && !first_input){
-            console.log("Still in num1");
             last_num = parseInt(last_num + button.value);
             display.textContent = last_num;
         } else {
@@ -41,19 +38,20 @@ num_buttons.forEach( button => {
 operators.forEach( button => {
     button.addEventListener( "click", () => {
         console.log(button.value, "is pressed");
-        if (button.value !== "operate" && !operator_used) {
+        if (button.value !== "operate") {
             operator_func = operator_check(button.value);
             operator_used = true;
             first_input = true;
-        } else{
-            if (second_input && operator_func) {
-                let ans = calculate(operator_func, last_num, next_num);
-                display.textContent = ans
-                last_num = ans;
-                operator_used = false;
-                operator_func = undefined;
-                next_num = 0;
-            }
+            console.log("operator_used", operator_used)
+
+        } 
+        if (second_input){ 
+            let ans = calculate(operator_func, last_num, next_num);
+            display.textContent = ans
+            last_num = ans;
+            operator_used = false;
+            operator_func = undefined;
+            next_num = 0;
         }
         
     });
